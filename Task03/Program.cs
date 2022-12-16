@@ -2,10 +2,13 @@
 //Найдите разницу между максимальным и минимальным элементов массива.
 double[] arr = new double[4];
 void PrintArray(double[] arr)
-{ 
+{
+Random rnd = new Random();
+
+
              for (int i = 0; i < arr.Length; i++)
     {
-        arr[i] = new Random().NextDouble()*10;
+        arr[i] = rnd.NextDouble()*10;
         Console.Write($"{arr[i]:F2}, "); 
           
     }
@@ -45,3 +48,4 @@ void PrintArray(double[] arr)
 PrintArray(arr);
 double Diff = MaxArr(arr) - MinArr(arr);
 Console.WriteLine($"Разница = {Diff:F2}");
+

@@ -3,9 +3,10 @@
 int[] arr = new int[6];
 void PrintArray(int[] arr)
 {
+    Random rnd = new Random();
          for (int i = 0; i < arr.Length; i++)
     {
-        arr[i] = new Random().Next(-99 , 99);
+        arr[i] = rnd.Next(-99 , 99);
         Console.Write($"{arr[i]}, "); 
           
     }
